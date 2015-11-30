@@ -25,6 +25,7 @@
     <sprite>sprites\spr_guardWalkLeft</sprite>
     <sprite>sprites\spr_guardWalkRight</sprite>
     <sprite>sprites\spr_guard</sprite>
+    <sprite>sprites\spr_test</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
