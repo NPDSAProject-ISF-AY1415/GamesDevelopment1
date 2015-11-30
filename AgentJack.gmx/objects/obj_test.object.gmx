@@ -81,12 +81,12 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>3</string>
+            <string>4</string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="37">
+    <event eventtype="9" enumb="37">
       <action>
         <libid>1</libid>
         <id>101</id>
