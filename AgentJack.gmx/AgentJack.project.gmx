@@ -22,8 +22,8 @@
     <sprite>sprites\spr_platform</sprite>
     <sprite>sprites\spr_tile14</sprite>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_guardWalkLeft</sprite>
-    <sprite>sprites\spr_guardWalkRight</sprite>
+    <sprite>sprites\spr_guardRight</sprite>
+    <sprite>sprites\spr_guardLeft</sprite>
     <sprite>sprites\spr_guard</sprite>
     <sprite>sprites\spr_test</sprite>
   </sprites>
@@ -47,6 +47,7 @@
     <object>objects\obj_tile9</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_Guard</object>
+    <object>objects\obj_test</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Guard_testing_room</room>
