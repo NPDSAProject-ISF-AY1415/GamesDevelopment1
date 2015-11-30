@@ -54,9 +54,10 @@
     <instance objName="obj_platform" x="128" y="384" name="inst_C82E570A" locked="0" code="" scaleX="3.20000004768372" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="224" name="inst_289CAF73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="608" y="224" name="inst_F0309996" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_guardWalkLeft" x="288" y="288" name="inst_92A47D91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_guardWalkLeft" x="640" y="640" name="inst_E3A43F01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_guardWalkLeft" x="352" y="704" name="inst_3F987E21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="288" y="288" name="inst_92A47D91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="640" y="640" name="inst_E3A43F01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="352" y="704" name="inst_3F987E21" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Guard" x="352" y="320" name="inst_03F0BE7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -11,6 +11,54 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*if(direction &gt;= 45 &amp;&amp; direction &lt; 135)
+{
+    //face up sprite
+}
+else if(direction &gt;= 135 &amp;&amp; direction &lt; 225)
+{
+    //face left sprite
+    sprite_index = spr_guardWalkLeft;
+}
+else if(direction &gt;= 225 &amp;&amp; direction &lt; 315)
+{
+    //face down sprite
+}
+else
+{
+    //face right sprite
+    sprite_index = spr_guardWalkRight;
+}*/
+if(direction = 180)
+{
+    //face left sprite
+    sprite_index = spr_guardWalkLeft;
+}
+else if( direction = 0)
+{
+    //face right sprite
+    sprite_index = spr_guardWalkRight;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>101</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -25,11 +73,43 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>000111000</string>
+            <string>000101000</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>2</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>119</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_path</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>8</kind>
+            <path>path_Guard</path>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -48,6 +128,34 @@
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>541</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_set</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_guardWalkRight</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
       </action>
     </event>
   </events>
