@@ -26,6 +26,8 @@
     <sprite>sprites\spr_guardWalkRight</sprite>
     <sprite>sprites\spr_guard</sprite>
     <sprite>sprites\spr_test</sprite>
+    <sprite>sprites\spr_player_test</sprite>
+    <sprite>sprites\spr_test_deer</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -33,6 +35,12 @@
   <paths name="paths">
     <path>paths\path_Guard</path>
   </paths>
+  <scripts name="scripts">
+    <script>scripts\scr_menu.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_segoe</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_tile1</object>
     <object>objects\obj_platform</object>
@@ -47,8 +55,12 @@
     <object>objects\obj_tile9</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_Guard</object>
+    <object>objects\obj_test_deer</object>
+    <object>objects\obj_menu</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu</room>
+    <room>rooms\rm_player_mech_test</room>
     <room>rooms\Guard_testing_room</room>
     <room>rooms\room0</room>
   </rooms>
