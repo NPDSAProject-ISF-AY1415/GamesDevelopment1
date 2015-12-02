@@ -58,11 +58,12 @@
     <object>objects\obj_test_deer</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_test</object>
+    <object>objects\obj_player</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Guard_testing_room</room>
-    <room>rooms\rm_menu</room>
     <room>rooms\rm_player_mech_test</room>
+    <room>rooms\rm_menu</room>
+    <room>rooms\Guard_testing_room</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
