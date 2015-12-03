@@ -54,8 +54,7 @@
     <instance objName="obj_platform" x="128" y="384" name="inst_C82E570A" locked="0" code="" scaleX="3.20000004768372" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="128" y="224" name="inst_289CAF73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="608" y="224" name="inst_F0309996" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Guard" x="352" y="320" name="inst_03F0BE7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_test" x="160" y="320" name="inst_6AF76228" locked="0" code="" scaleX="0.173913046717644" scaleY="0.349726766347885" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Dog" x="256" y="288" name="inst_28F927BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -28,6 +28,11 @@
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_player_test</sprite>
     <sprite>sprites\spr_test_deer</sprite>
+    <sprite>sprites\spr_Dog</sprite>
+    <sprite>sprites\spr_DogLeft</sprite>
+    <sprite>sprites\spr_DogRight</sprite>
+    <sprite>sprites\spr_DogRun</sprite>
+    <sprite>sprites\spr_FullDog</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -54,18 +59,19 @@
     <object>objects\obj_tile10</object>
     <object>objects\obj_tile9</object>
     <object>objects\obj_wall</object>
-    <object>objects\obj_Guard</object>
     <object>objects\obj_test_deer</object>
     <object>objects\obj_menu</object>
-    <object>objects\obj_test</object>
     <object>objects\obj_player</object>
     <object>objects\obj_pause</object>
+    <object>objects\obj_Dog</object>
+    <object>objects\obj_guard</object>
+    <object>objects\obj_test</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Guard_testing_room</room>
     <room>rooms\rm_initialise</room>
     <room>rooms\rm_player_mech_test</room>
     <room>rooms\rm_menu</room>
-    <room>rooms\Guard_testing_room</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
