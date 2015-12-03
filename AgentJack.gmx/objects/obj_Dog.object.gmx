@@ -94,7 +94,7 @@ switch(direction div 90)
     xx = x - len;
     break;
 }
-if(instance_exists(obj_test))
+if(instance_exists(objectF))
 {
     if(alert == 1)
     {
