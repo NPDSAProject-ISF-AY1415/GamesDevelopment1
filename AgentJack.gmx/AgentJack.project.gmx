@@ -63,7 +63,7 @@
     <object>objects\obj_menu</object>
     <object>objects\obj_player</object>
     <object>objects\obj_pause</object>
-    <object>objects\obj_Dog</object>
+    <object>objects\obj_dog</object>
     <object>objects\obj_guard</object>
     <object>objects\obj_test</object>
   </objects>

@@ -92,13 +92,13 @@ global.seconds = 0;
         mp_grid_add_instances(path,obj_platform,1);
         mp_grid_path(grid,path,x,y,obj_test.x,y,0);
         path_start(path,3,"",1);
-        instDog = instance_nearest(x,y,obj_Dog);
+        instDog = instance_nearest(x,y,obj_dog);
         if(instDog.alert == 0)
         {
-            obj_Guard.alert = 0;
+            obj_guard.alert = 0;
             hspeed = 1;
             path_end();
-            instance_create(x,y,obj_Guard);
+            instance_create(x,y,obj_guard);
             instance_destroy();
         }
     }
@@ -111,7 +111,7 @@ global.seconds = 0;
         {
             alert = 0;
             hspeed = 1;
-            instance_create(x,y,obj_Guard);
+            instance_create(x,y,obj_guard);
             instance_destroy();
         }
     }    
@@ -190,7 +190,7 @@ switch(direction div 90)
         <exetype>1</exetype>
         <functionname>action_if_variable</functionname>
         <codestring></codestring>
-        <whoName>obj_Dog</whoName>
+        <whoName>obj_dog</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>

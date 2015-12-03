@@ -105,16 +105,16 @@ if(instance_exists(obj_test))
         {
             alert = 0;
             hspeed = 1;
-            instance_create(x,y,obj_Dog);
+            instance_create(x,y,obj_dog);
             instance_destroy();
         }
     }    
     else 
         if(collision_line(x,y,xx,yy,objectF,0,1) || ( collision_circle(x,y,64,objectF,0,1)))
         {  
-            if(collision_line(x+l,y,x-l,y,obj_Guard,0,1))
+            if(collision_line(x+l,y,x-l,y,obj_guard,0,1))
             {
-                inst = instance_nearest(x,y,obj_Guard);
+                inst = instance_nearest(x,y,obj_guard);
                 inst.alert = 2;
             }
             alert = 1;
