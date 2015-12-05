@@ -35,6 +35,7 @@
     <sprite>sprites\spr_FullDog</sprite>
     <sprite>sprites\spr_camera</sprite>
     <sprite>sprites\spr_laser</sprite>
+    <sprite>sprites\spr_switch</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -70,6 +71,7 @@
     <object>objects\obj_test</object>
     <object>objects\obj_camera</object>
     <object>objects\obj_laser</object>
+    <object>objects\obj_switch</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

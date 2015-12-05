@@ -309,9 +309,9 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_line(x,y,xx,yy);
+            <string>//draw_line(x,y,xx,yy);
 draw_self();
-draw_circle(x,y,64,1);
+//draw_circle(x,y,64,1);
 </string>
           </argument>
         </arguments>
