@@ -36,6 +36,8 @@ objectF = obj_test;
 count = 0;
 l = 400;
 h = 64;
+dogFood = 0;
+timer = 3;
 </string>
           </argument>
         </arguments>
@@ -94,7 +96,8 @@ switch(direction div 90)
     xx = x - len;
     break;
 }
-if(instance_exists(objectF))
+// Check if player is nearby and if dog has been fed dog food
+if(instance_exists(objectF) &amp;&amp; dogFood == 0)
 {
     if(alert == 1)
     {
@@ -126,6 +129,14 @@ if(instance_exists(objectF))
       //  path_start(path_Guard,1,2,1);
     }
 }
+if(dogFood == 1 &amp;&amp; !collision_line(x,y,xx,yy,objectF,0,1) &amp;&amp; !collision_circle(x,y,64,objectF,0,1))
+    timer -= 1/room_speed;
+    if(timer == 0)
+    {    
+        dogFood = 0;
+        timer = 3;
+    }
+    
 </string>
           </argument>
         </arguments>
@@ -164,10 +175,12 @@ if(instance_exists(objectF))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw_line(x,y,xx,yy);
+            <string>draw_line(x,y,xx,yy);
 draw_self();
-//draw_circle(x,y,64,1);
+draw_circle(x,y,64,1);
 //draw_line(x+l,y,x-l,y);
+if(dogFood == 1)
+    draw_sprite(spr_smiley,0,x,y-32);
 </string>
           </argument>
         </arguments>
