@@ -74,10 +74,27 @@ hsp = move * movespeed;
 if(vsp &lt; 10)
     vsp += grav;
     
+    
+//Ladder Collision
+if(place_meeting(x, y, obj_ladder))
+{
+    vsp = 0;
+    grav = 0;
+    if(key_up)
+        vsp = -movespeed;
+    if(key_down)
+        vsp = movespeed;
+
+}
+
+
+
 if(place_meeting(x, y+1, obj_platform)) //are we on the floor?
 {
     vsp = key_up * -jumpspeed;
 }
+
+
 
 //Horizontal Collision
 if(place_meeting(x + hsp, y, obj_wall)) //are we about to collide?
@@ -119,21 +136,35 @@ if (keyboard_check_pressed(vk_space))
     }
 }
 
-if (keyboard_check(ord("P")))
-{
-    if(place_meeting(x, y, obj_serum)) 
-    {
-        obj_serum.sprite_index = spr_empty;
-        //draw
-        global.serum_collected = true;
-    }
-    else
-    {  
-        // no nearby objects    
-        // display message?   
+// Ladder mechanic
+/*
+if place_meeting(x,y,obj_ladder) then //if on a ladder... 
+{ 
+    gravity=0 //Don't fall 
+    vspeed=0 
+} 
+
+if (keyboard_check(vk_up))then{
+    if place_meeting(x,y,obj_ladder)
+        {vspeed=-4}
+}
+if keyboard_check_released(vk_up) then{
+    if place_meeting(x,y,obj_ladder){
+        vspeed=0
     }
 }
-
+//Ladder Down
+if (keyboard_check(vk_down)) then{
+    if place_meeting(x,y,obj_ladder){
+        vspeed=4
+    }
+}
+if keyboard_check_released(vk_down) then{
+    if place_meeting(x,y,obj_ladder){
+        vspeed=0
+    }
+}
+*/
 
 </string>
           </argument>
