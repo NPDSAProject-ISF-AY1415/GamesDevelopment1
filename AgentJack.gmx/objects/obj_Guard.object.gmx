@@ -35,6 +35,7 @@ alert = 0;
 objectF = obj_test;
 count = 0;
 global.seconds = 0;
+
 </string>
           </argument>
         </arguments>
@@ -81,10 +82,14 @@ global.seconds = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(objectF.sprite_index == spr_test || alert == 2)
+            <string> //Check if object is in prop mode and is moving or if is in original form or if alerted by dog
+if(objectF.sprite_index == spr_test || ((objectF.sprite_index != spr_test) &amp;&amp; (objectF.speed &gt; 0)) || alert == 2)
 {
+    
     if(alert == 2)
     {
+        if(!audio_is_playing(snd_alarm))
+            audio_play_sound(snd_alarm,1,0);
         //pathfinding with dog
         grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
         path = path_add();
@@ -104,6 +109,11 @@ global.seconds = 0;
     }
     else if(alert == 1)
     {
+        if(place_meeting(x,y,objectF))
+        {
+            show_message('You are caught');
+            room_restart();
+        } 
     //Guard is follwing player by itself
         move_towards_point(objectF.x,y,2);
        
@@ -121,6 +131,8 @@ global.seconds = 0;
             alert = 1;
     }
 }
+
+// Switch sprites to face direction it is walking to
 switch(direction div 90)
 {
     case 0: sprite_index = spr_guardRight; 
@@ -137,143 +149,6 @@ switch(direction div 90)
 </string>
           </argument>
         </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>alert</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>2</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>obj_dog</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>alert</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*obj_Guard.alert = 0;
-hspeed = 1;
-path_end();
-instance_create(x,y,obj_Guard);
-instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="obj_wall">
@@ -312,6 +187,11 @@ instance_destroy();
             <string>//draw_line(x,y,xx,yy);
 draw_self();
 //draw_circle(x,y,64,1);
+
+if(alert == 1 || alert == 2)
+{
+   draw_sprite(spr_alert,0,x,y-64);
+}
 </string>
           </argument>
         </arguments>

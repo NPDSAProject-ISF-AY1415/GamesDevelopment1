@@ -4,27 +4,46 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\highAlert</sound>
+    <sound>sound\snd_BkMusic</sound>
+    <sound>sound\snd_alarm</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_tile1</sprite>
-    <sprite>sprites\spr_tile2</sprite>
-    <sprite>sprites\spr_tile3</sprite>
-    <sprite>sprites\spr_tile4</sprite>
-    <sprite>sprites\spr_tile5</sprite>
-    <sprite>sprites\spr_tile6</sprite>
-    <sprite>sprites\spr_tile7</sprite>
-    <sprite>sprites\spr_tile8</sprite>
-    <sprite>sprites\spr_tile9</sprite>
-    <sprite>sprites\spr_tile10</sprite>
-    <sprite>sprites\spr_tile11</sprite>
-    <sprite>sprites\spr_tile12</sprite>
-    <sprite>sprites\spr_ladder</sprite>
-    <sprite>sprites\spr_platform</sprite>
-    <sprite>sprites\spr_tile14</sprite>
+    <sprites name="tiles">
+      <sprite>sprites\spr_tile3</sprite>
+      <sprite>sprites\spr_tile1</sprite>
+      <sprite>sprites\spr_tile2</sprite>
+      <sprite>sprites\spr_tile8</sprite>
+      <sprite>sprites\spr_tile4</sprite>
+      <sprite>sprites\spr_tile5</sprite>
+      <sprite>sprites\spr_tile6</sprite>
+      <sprite>sprites\spr_tile7</sprite>
+      <sprite>sprites\spr_tile12</sprite>
+      <sprite>sprites\spr_tile9</sprite>
+      <sprite>sprites\spr_tile11</sprite>
+      <sprite>sprites\spr_tile10</sprite>
+      <sprite>sprites\spr_tile14</sprite>
+      <sprite>sprites\spr_ladder</sprite>
+      <sprite>sprites\spr_platform</sprite>
+    </sprites>
+    <sprites name="Security">
+      <sprite>sprites\spr_camera</sprite>
+      <sprite>sprites\spr_DogRun</sprite>
+      <sprite>sprites\spr_guardRight</sprite>
+      <sprite>sprites\spr_guardLeft</sprite>
+      <sprite>sprites\spr_guard</sprite>
+      <sprite>sprites\spr_switch</sprite>
+      <sprite>sprites\spr_laser</sprite>
+      <sprite>sprites\spr_DogRight</sprite>
+      <sprite>sprites\spr_DogLeft</sprite>
+      <sprite>sprites\spr_FullDog</sprite>
+      <sprite>sprites\spr_Dog</sprite>
+    </sprites>
+    <sprites name="Item">
+      <sprite>sprites\spr_dogFood</sprite>
+    </sprites>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\spr_guardRight</sprite>
-    <sprite>sprites\spr_guardLeft</sprite>
-    <sprite>sprites\spr_guard</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_player_test</sprite>
     <sprite>sprites\spr_test_deer</sprite>
@@ -45,6 +64,8 @@
     <sprite>sprites\spr_life</sprite>
     <sprite>sprites\spr_serum</sprite>
     <sprite>sprites\spr_empty</sprite>
+    <sprite>sprites\spr_alert</sprite>
+    <sprite>sprites\spr_smiley</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -54,30 +75,41 @@
   </paths>
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_item_behavior.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_segoe</font>
     <font>fonts\fnt_hud</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_tile1</object>
-    <object>objects\obj_platform</object>
-    <object>objects\obj_tile2</object>
-    <object>objects\obj_ladder</object>
-    <object>objects\obj_tile3</object>
-    <object>objects\obj_tile14</object>
+    <objects name="Tiles">
+      <object>objects\obj_tile1</object>
+      <object>objects\obj_tile3</object>
+      <object>objects\obj_tile2</object>
+      <object>objects\obj_tile9</object>
+      <object>objects\obj_tile10</object>
+      <object>objects\obj_tile11</object>
+      <object>objects\obj_tile12</object>
+      <object>objects\obj_tile14</object>
+      <object>objects\obj_platform</object>
+      <object>objects\obj_ladder</object>
+    </objects>
+    <objects name="Security">
+      <object>objects\obj_switch</object>
+      <object>objects\obj_dog</object>
+      <object>objects\obj_camera</object>
+      <object>objects\obj_guard</object>
+      <object>objects\obj_laser</object>
+    </objects>
+    <objects name="Item">
+      <object>objects\obj_dogFood</object>
+    </objects>
     <object>objects\object6</object>
-    <object>objects\obj_tile12</object>
-    <object>objects\obj_tile11</object>
-    <object>objects\obj_tile10</object>
-    <object>objects\obj_tile9</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_test_deer</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_player</object>
     <object>objects\obj_pause</object>
-    <object>objects\obj_dog</object>
-    <object>objects\obj_guard</object>
     <object>objects\obj_test</object>
     <object>objects\obj_camera</object>
     <object>objects\obj_laser</object>
@@ -100,6 +132,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room5</room>
+    <object>objects\obj_spawn</object>
+    <object>objects\obj_bkMusic</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\Guard_testing_room</room>
+    <room>rooms\room0</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_initialise</room>
     <room>rooms\rm_player_mech_test</room>
