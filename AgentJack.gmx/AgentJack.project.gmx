@@ -28,6 +28,7 @@
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_player_test</sprite>
     <sprite>sprites\spr_test_deer</sprite>
+    <sprite>sprites\spr_deer_1</sprite>
     <sprite>sprites\spr_Dog</sprite>
     <sprite>sprites\spr_DogLeft</sprite>
     <sprite>sprites\spr_DogRight</sprite>
@@ -36,6 +37,14 @@
     <sprite>sprites\spr_camera</sprite>
     <sprite>sprites\spr_laser</sprite>
     <sprite>sprites\spr_switch</sprite>
+    <sprite>sprites\spr_deer_2</sprite>
+    <sprite>sprites\spr_deer_full</sprite>
+    <sprite>sprites\spr_deer3</sprite>
+    <sprite>sprites\spr_hud_details</sprite>
+    <sprite>sprites\spr_inventory</sprite>
+    <sprite>sprites\spr_life</sprite>
+    <sprite>sprites\spr_serum</sprite>
+    <sprite>sprites\spr_empty</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -48,6 +57,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_segoe</font>
+    <font>fonts\fnt_hud</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_tile1</object>
@@ -72,13 +82,29 @@
     <object>objects\obj_camera</object>
     <object>objects\obj_laser</object>
     <object>objects\obj_switch</object>
+    <object>objects\obj_pausedisable</object>
+    <object>objects\obj_hud</object>
+    <object>objects\obj_prop</object>
+    <object>objects\obj_deer1</object>
+    <object>objects\obj_deer2</object>
+    <object>objects\obj_deer3</object>
+    <object>objects\obj_inventory</object>
+    <object>objects\obj_life</object>
+    <object>objects\obj_serum</object>
+    <object>objects\obj_slot0</object>
+    <object>objects\obj_slot1</object>
+    <object>objects\obj_slot</object>
+    <object>objects\obj_inventorycontrol</object>
+    <object>objects\obj_food</object>
+    <object>objects\obj_item</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
-    <room>rooms\Guard_testing_room</room>
+    <room>rooms\room5</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_initialise</room>
     <room>rooms\rm_player_mech_test</room>
+    <room>rooms\room0</room>
+    <room>rooms\Guard_testing_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
