@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check_pressed(ord('E'))
+            <string>if keyboard_check(ord('E'))
 {
     if(on == 1)
     {
@@ -90,9 +90,9 @@
           <argument>
             <kind>1</kind>
             <string>if(on == 1)
-    draw_sprite_ext(sprite_index,0,x,y,1,1,0,c_white,1);
-else
     draw_sprite_ext(sprite_index,2,x,y,1,1,0,c_white,1);
+else
+    draw_sprite_ext(sprite_index,0,x,y,1,1,0,c_white,1);
 </string>
           </argument>
         </arguments>
