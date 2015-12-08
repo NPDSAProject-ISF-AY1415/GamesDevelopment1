@@ -33,8 +33,9 @@ xx = x + len;
 yy = y;
 alert = 0;
 objectF = obj_test;
+//objectF = obj_player;
 count = 0;
-global.seconds = 0;
+timer = 3;
 
 </string>
           </argument>
@@ -85,11 +86,30 @@ global.seconds = 0;
             <string> //Check if object is in prop mode and is moving or if is in original form or if alerted by dog
 if(objectF.sprite_index == spr_test || ((objectF.sprite_index != spr_test) &amp;&amp; (objectF.speed &gt; 0)) || alert == 2)
 {
-    
+    if(alert == 3)
+    {
+   
+        //pathfinding with dog
+        grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
+        path = path_add();
+        mp_grid_add_instances(path,obj_wall,1);
+        mp_grid_add_instances(path,obj_platform,1);
+        mp_grid_path(grid,path,x,y,objectF.x,y,0);
+        path_start(path,3,"",1);
+        timer -= 1/room_speed;
+        if(timer == 0)
+        {
+            obj_guard.alert = 0;
+            hspeed = 1;
+            path_end();
+            instance_create(x,y,obj_guard);
+            instance_destroy();
+            timer = 3;
+        }
+    }
     if(alert == 2)
     {
-        if(!audio_is_playing(snd_alarm))
-            audio_play_sound(snd_alarm,1,0);
+
         //pathfinding with dog
         grid = mp_grid_create(0,0,room_width/32,room_height/32,32,32);
         path = path_add();
@@ -109,13 +129,8 @@ if(objectF.sprite_index == spr_test || ((objectF.sprite_index != spr_test) &amp;
     }
     else if(alert == 1)
     {
-        if(place_meeting(x,y,objectF))
-        {
-            show_message('You are caught');
-            room_restart();
-        } 
     //Guard is follwing player by itself
-        move_towards_point(objectF.x,y,2);
+        move_towards_point(objectF.x,y,3);
        
         if ((!collision_line(x,y,xx,yy,objectF,0,1)) &amp;&amp;(!collision_circle(x,y,64,objectF,0,1))) //&amp;&amp; !collision_line(x,y,xx,yy,obj_wall,0,1)
         {
@@ -146,6 +161,38 @@ switch(direction div 90)
 }
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// if guard is alerted
+// Once detected player chase even if in prop form
+if(alert &gt;= 1)
+{
+    if(!audio_is_playing(snd_radioChatter))
+        audio_play_sound(snd_radioChatter,1,0);
+    if(place_meeting(x,y,objectF))
+    {
+        show_message("You are caught");
+        room_restart();
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -188,7 +235,7 @@ switch(direction div 90)
 draw_self();
 //draw_circle(x,y,64,1);
 
-if(alert == 1 || alert == 2)
+if(alert &gt;= 1)
 {
    draw_sprite(spr_alert,0,x,y-64);
 }

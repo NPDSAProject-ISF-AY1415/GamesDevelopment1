@@ -33,6 +33,7 @@ xx = x + len;
 yy = y;
 alert = 0;
 objectF = obj_test;
+//objectF = obj_player;
 count = 0;
 l = 400;
 h = 64;
@@ -116,7 +117,7 @@ if(instance_exists(objectF) &amp;&amp; dogFood == 0)
         if(collision_line(x,y,xx,yy,objectF,0,1) || ( collision_circle(x,y,64,objectF,0,1)))
         {  
             if(collision_line(x+l,y,x-l,y,obj_guard,0,1))
-            {
+            {                
                 inst = instance_nearest(x,y,obj_guard);
                 inst.alert = 2;
             }
@@ -137,6 +138,35 @@ if(dogFood == 1 &amp;&amp; !collision_line(x,y,xx,yy,objectF,0,1) &amp;&amp; !co
         timer = 3;
     }
     
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Dog bark
+if(alert &gt;= 1)
+{
+    if(!audio_is_playing(snd_dogBark))
+    {
+        audio_play_sound(snd_dogBark,0,0);
+    }
+}
+
 </string>
           </argument>
         </arguments>

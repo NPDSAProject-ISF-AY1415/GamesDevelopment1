@@ -8,6 +8,11 @@
     <sound>sound\highAlert</sound>
     <sound>sound\snd_BkMusic</sound>
     <sound>sound\snd_alarm</sound>
+    <sound>sound\snd_dogBark</sound>
+    <sound>sound\snd_electricShock</sound>
+    <sound>sound\snd_powerDown</sound>
+    <sound>sound\snd_powerUp</sound>
+    <sound>sound\snd_radioChatter</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="tiles">
@@ -49,6 +54,10 @@
     <sprite>sprites\spr_test_deer</sprite>
     <sprite>sprites\spr_alert</sprite>
     <sprite>sprites\spr_smiley</sprite>
+    <sprite>sprites\spr_laserHorizontal</sprite>
+    <sprites name="prop">
+      <sprite>sprites\spr_rat</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -95,10 +104,11 @@
     <object>objects\obj_test</object>
     <object>objects\obj_spawn</object>
     <object>objects\obj_bkMusic</object>
+    <object>objects\obj_rat</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Guard_testing_room</room>
     <room>rooms\room0</room>
+    <room>rooms\Guard_testing_room</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_initialise</room>
     <room>rooms\rm_player_mech_test</room>

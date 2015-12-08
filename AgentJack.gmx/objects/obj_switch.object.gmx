@@ -52,14 +52,19 @@
 {
     if(on == 1)
     {
-        //show_message("Laser disabled");
+        // Disabled laser
+        if(!audio_is_playing(snd_powerDown))
+            audio_play_sound(snd_powerDown,0,0);
         instance_deactivate_object(obj_laser);
         on = 0;
     }
     else
     {
-        instance_activate_object(obj_laser);
-        on = 1; 
+        // Enable laser
+        if(!audio_is_playing(snd_powerUp))
+                audio_play_sound(snd_powerUp,0,0);
+            instance_activate_object(obj_laser);
+            on = 1; 
     }
 }
 </string>
@@ -85,9 +90,9 @@
           <argument>
             <kind>1</kind>
             <string>if(on == 1)
-    draw_sprite_ext(sprite_index,3,x,y,1,1,0,c_white,1);
+    draw_sprite_ext(sprite_index,2,x,y,1,1,0,c_white,1);
 else
-    draw_sprite_ext(sprite_index,1,x,y,1,1,0,c_white,1);
+    draw_sprite_ext(sprite_index,0,x,y,1,1,0,c_white,1);
 </string>
           </argument>
         </arguments>

@@ -28,6 +28,7 @@
             <string>/// Init the camera
 randomize();
 objectF = obj_test;
+//objectF = obj_player;
 //calculate the camera
 rot = 0;
 up = choose(true,false);
@@ -66,10 +67,12 @@ up = choose(true,false);
 xx = x + lengthdir_x(len,rot);
 yy = y + lengthdir_y(len,rot);
 
-if collision_line(x,y,xx,yy,objectF,0,1) &amp;&amp; !collision_line(x,y,xx,yy,obj_wall,0,1)
+if collision_line(x,y,xx,yy,objectF,0,1) &amp;&amp; !collision_line(x,y,xx,yy,obj_wall,0,1) &amp;&amp; !collision_line(x,y,xx,yy,obj_platform,0,1)
 {
-    show_message("Oh no you got caught!");
-    room_restart();
+    if(!audio_is_playing(snd_alarm))
+        audio_play_sound(snd_alarm,1,0);
+    obj_guard.alert = 3;
+    
 }
 
 if !(up) &amp;&amp; rot &lt; minang
