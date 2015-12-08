@@ -53,14 +53,6 @@
     <sprite>sprites\spr_player_test</sprite>
     <sprite>sprites\spr_test_deer</sprite>
     <sprite>sprites\spr_deer_1</sprite>
-    <sprite>sprites\spr_Dog</sprite>
-    <sprite>sprites\spr_DogLeft</sprite>
-    <sprite>sprites\spr_DogRight</sprite>
-    <sprite>sprites\spr_DogRun</sprite>
-    <sprite>sprites\spr_FullDog</sprite>
-    <sprite>sprites\spr_camera</sprite>
-    <sprite>sprites\spr_laser</sprite>
-    <sprite>sprites\spr_switch</sprite>
     <sprite>sprites\spr_deer_2</sprite>
     <sprite>sprites\spr_deer_full</sprite>
     <sprite>sprites\spr_deer3</sprite>
@@ -120,9 +112,6 @@
     <object>objects\obj_player</object>
     <object>objects\obj_pause</object>
     <object>objects\obj_test</object>
-    <object>objects\obj_camera</object>
-    <object>objects\obj_laser</object>
-    <object>objects\obj_switch</object>
     <object>objects\obj_pausedisable</object>
     <object>objects\obj_hud</object>
     <object>objects\obj_prop</object>
@@ -138,21 +127,17 @@
     <object>objects\obj_inventorycontrol</object>
     <object>objects\obj_food</object>
     <object>objects\obj_item</object>
-  </objects>
-  <rooms name="rooms">
-    <room>rooms\room5</room>
     <object>objects\obj_spawn</object>
     <object>objects\obj_bkMusic</object>
     <object>objects\obj_rat</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room5</room>
     <room>rooms\Guard_testing_room</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_initialise</room>
     <room>rooms\rm_player_mech_test</room>
-    <room>rooms\room0</room>
-    <room>rooms\Guard_testing_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
