@@ -7,7 +7,7 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>15</bbox_left>
+  <bbox_left>19</bbox_left>
   <bbox_right>47</bbox_right>
   <bbox_top>17</bbox_top>
   <bbox_bottom>46</bbox_bottom>
@@ -20,8 +20,6 @@
   <width>64</width>
   <height>64</height>
   <frames>
-    <frame index="0">images\spr_test_deer_0.png</frame>
-    <frame index="1">images\spr_test_deer_1.png</frame>
-    <frame index="2">images\spr_test_deer_2.png</frame>
+    <frame index="0">images\spr_deer_1_0.png</frame>
   </frames>
 </sprite>
