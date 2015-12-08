@@ -190,7 +190,6 @@ if(alert &gt;= 1)
     if(place_meeting(x,y,objectF))
     {
         show_message("You are caught");
-        room_restart();
     }
 }
 </string>

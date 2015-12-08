@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>life = 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -50,21 +73,54 @@
 draw_set_alpha(1); //1 for solid
 draw_set_font(fnt_hud);
 
-instance_create(room_width - 50, 50, obj_inventory);
-instance_create(room_width - 100, 50, obj_inventory);
-instance_create(room_width - 150, 50, obj_inventory);
-instance_create(room_width - 200, 50, obj_inventory);
+instance_create(room_width - 75, 25, obj_inventory);
+instance_create(room_width - 125, 25, obj_inventory);
+instance_create(room_width - 175, 25, obj_inventory);
+instance_create(room_width - 225, 25, obj_inventory);
 
-lifeX = 50;
-lifeY = 50;
+lifeX = 25;
+lifeY = 25;
 character_formX = 32;
 character_formY = 64;
 
-life = 3
+
 max_life = 3;
 draw_text(lifeX, lifeY, "Life:");
-instance_create(lifeX + 50, lifeY, obj_life);
+
+if(life == 0)
+{
+    show_message("Game Over");
+    room_restart();
+}
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>714</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_life_images</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>32</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>32</string>
+          </argument>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_life</sprite>
           </argument>
         </arguments>
       </action>
