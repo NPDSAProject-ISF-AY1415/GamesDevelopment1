@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>/// Init the camera
 randomize();
-objectF = obj_test;
-//objectF = obj_player;
+//objectF = obj_test;
+objectF = obj_player;
 //calculate the camera
 rot = 0;
 up = choose(true,false);

@@ -32,8 +32,9 @@ rot = 0;
 xx = x + len;
 yy = y;
 alert = 0;
-objectF = obj_test;
-//objectF = obj_player;
+//objectF = obj_test;
+objectF = obj_player;
+spriteF = spr_test_deer;
 count = 0;
 timer = 3;
 
@@ -84,7 +85,7 @@ timer = 3;
           <argument>
             <kind>1</kind>
             <string> //Check if object is in prop mode and is moving or if is in original form or if alerted by dog
-if(objectF.sprite_index == spr_test || ((objectF.sprite_index != spr_test) &amp;&amp; (objectF.speed &gt; 0)) || alert == 2)
+if(objectF.sprite_index == spriteF || ((objectF.sprite_index != spriteF) &amp;&amp; (objectF.hsp &gt; 0)) || alert == 2)
 {
     if(alert == 3)
     {
@@ -189,6 +190,9 @@ if(alert &gt;= 1)
         audio_play_sound(snd_radioChatter,1,0);
     if(place_meeting(x,y,objectF))
     {
+        objectF.lives -= 1;
+        objectF.y = objectF.ystart;
+        objectF.x = objectF.xstart;
         show_message("You are caught");
     }
 }
