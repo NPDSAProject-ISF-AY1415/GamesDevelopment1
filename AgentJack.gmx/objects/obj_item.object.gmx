@@ -31,7 +31,7 @@
     {
         slot = -1;
         for(i=0;i&lt;2;i++){
-          if(obj_inventorycontrol.inv[i,0] = index){
+          if(obj_inventorycontrol.inv[i,0] == index){
               slot = i;
               break;
           }

@@ -143,7 +143,7 @@ if(objectF.sprite_index == spriteF || ((objectF.sprite_index != spriteF) &amp;&a
     }    
     else
     { 
-        if(collision_line(x,y,xx,yy,objectF,0,1) || ( collision_circle(x,y,64,objectF,0,1)))
+        if((collision_line(x,y,xx,yy,objectF,0,1) || ( collision_circle(x,y,64,objectF,0,1))) &amp;&amp; !collision_line(x,y,xx,yy,obj_gate,0,1))
             alert = 1;
     }
 }
@@ -189,7 +189,7 @@ if(alert &gt;= 1)
     if(!audio_is_playing(snd_radioChatter))
         audio_play_sound(snd_radioChatter,1,0);
     if(place_meeting(x,y,objectF))
-    {
+    {        
         objectF.lives -= 1;
         objectF.y = objectF.ystart;
         objectF.x = objectF.xstart;
@@ -199,6 +199,22 @@ if(alert &gt;= 1)
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_gate">
+      <action>
+        <libid>1</libid>
+        <id>113</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_reverse_xdir</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="obj_wall">

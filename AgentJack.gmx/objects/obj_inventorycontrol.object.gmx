@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>sprites[0] = spr_empty;
 sprites[1] = spr_serum;
-sprites[2] = spr_deer_1;
+sprites[2] = spr_dogFood;
 
 for(i=0;i&lt;2;i++){
     inv[i,0] = 0;

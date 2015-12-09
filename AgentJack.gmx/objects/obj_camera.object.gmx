@@ -66,15 +66,15 @@ up = choose(true,false);
             <string>/// Step through the camera
 xx = x + lengthdir_x(len,rot);
 yy = y + lengthdir_y(len,rot);
-
-if collision_line(x,y,xx,yy,objectF,0,1) &amp;&amp; !collision_line(x,y,xx,yy,obj_wall,0,1) &amp;&amp; !collision_line(x,y,xx,yy,obj_platform,0,1)
+if(objectF.sprite_index != spr_ratLeft)
 {
-    if(!audio_is_playing(snd_alarm))
-        audio_play_sound(snd_alarm,1,0);
-    obj_guard.alert = 3;
-    
+    if collision_line(x,y,xx,yy,objectF,0,1) &amp;&amp; !collision_line(x,y,xx,yy,obj_wall,0,1) &amp;&amp; !collision_line(x,y,xx,yy,obj_platform,0,1)
+    {
+        if(!audio_is_playing(snd_alarm))
+            audio_play_sound(snd_alarm,1,0);
+        obj_guard.alert = 3;  
+    }
 }
-
 if !(up) &amp;&amp; rot &lt; minang
 {
     up = !up;

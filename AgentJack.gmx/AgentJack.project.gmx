@@ -15,6 +15,11 @@
     <sound>sound\snd_radioChatter</sound>
   </sounds>
   <sprites name="sprites">
+    <sprites name="player">
+      <sprite>sprites\spr_playerIdle</sprite>
+      <sprite>sprites\spr_playerJump</sprite>
+      <sprite>sprites\spr_playerRun</sprite>
+    </sprites>
     <sprites name="tiles">
       <sprite>sprites\spr_tile3</sprite>
       <sprite>sprites\spr_tile1</sprite>
@@ -48,7 +53,6 @@
     <sprites name="Item">
       <sprite>sprites\spr_dogFood</sprite>
     </sprites>
-    <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_test</sprite>
     <sprite>sprites\spr_player_test</sprite>
     <sprite>sprites\spr_test_deer</sprite>
@@ -62,6 +66,7 @@
     <sprite>sprites\spr_serum</sprite>
     <sprite>sprites\spr_empty</sprite>
     <sprite>sprites\spr_alert</sprite>
+    <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_smiley</sprite>
     <sprite>sprites\spr_laserHorizontal</sprite>
     <sprites name="prop">
@@ -69,6 +74,7 @@
     </sprites>
     <sprite>sprites\spr_crate</sprite>
     <sprite>sprites\spr_ratRight</sprite>
+    <sprite>sprites\spr_gate</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -133,14 +139,16 @@
     <object>objects\obj_bkMusic</object>
     <object>objects\obj_rat</object>
     <object>objects\obj_crate</object>
+    <object>objects\obj_gate</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\Guard_testing_room</room>
     <room>rooms\rm_player_mech_test</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_initialise</room>
     <room>rooms\room5</room>
-    <room>rooms\Guard_testing_room</room>
+    <room>rooms\room6</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
